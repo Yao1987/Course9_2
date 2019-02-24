@@ -1,0 +1,46 @@
+---
+title: "Project2_Course9"
+author: "Y. Lu"
+date: "2019Äê2ÔÂ20ÈÕ"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Marking on map
+
+Work address and home address are marked on map, with different icons.
+
+```{r mark_map}
+library(leaflet)
+Work_adres=c( 4.700745,50.876433)
+Home_adres=c(4.309687,50.885785)
+
+#Work_imag="http://madmeaning.com/wp-content/uploads/2017/10/Sleep-Icon-1.jpg"
+
+Work_imag="http://www.justthoughtyoushouldknow.org/wp-content/uploads/2014/08/Work_life_balance_rat_race.png"
+
+Home_imag="http://madmeaning.com/wp-content/uploads/2017/10/Sleep-Icon-1.jpg"
+
+Work_icon<-makeIcon(Work_imag,iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
+Home_icon<-makeIcon(Home_imag,iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
+
+
+II=icons(iconUrl=c(Work_imag,Home_imag),iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
+
+Pop=c("Work address","Home address")
+
+#II=icons(iconUrl=c(Work_image,Home_image),iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
+
+Location<-data.frame(Lng=c(Work_adres[1],Home_adres[1]),Lat=c(Work_adres[2]),Home_adres[2])
+
+
+m<-Location %>% leaflet() %>% addTiles() %>% addMarkers(lng=~Lng,lat=~Lat,popup=Pop,icon=II) %>% addPolylines( lng = ~Lng, lat = ~Lat)
+
+m
+
+```
+
+
