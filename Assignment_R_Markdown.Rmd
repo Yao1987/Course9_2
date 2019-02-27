@@ -1,12 +1,12 @@
 ---
 title: "Project2_Course9"
 author: "Y. Lu"
-date: "2019Äê2ÔÂ20ÈÕ"
+date: "2019-2-20"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ## Marking on map

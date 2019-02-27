@@ -194,7 +194,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">Project2_Course9</h1>
 <h4 class="author"><em>Y. Lu</em></h4>
-<h4 class="date"><em>2019年2月20日</em></h4>
+<h4 class="date"><em>2019-2-20</em></h4>
 
 </div>
 
@@ -202,35 +202,9 @@ $(document).ready(function () {
 <div id="marking-on-map" class="section level2">
 <h2>Marking on map</h2>
 <p>Work address and home address are marked on map, with different icons.</p>
-<pre class="r"><code>library(leaflet)</code></pre>
 <pre><code>## Warning: package 'leaflet' was built under R version 3.5.2</code></pre>
-<pre class="r"><code>Work_adres=c( 4.700745,50.876433)
-Home_adres=c(4.309687,50.885785)
-
-#Work_imag=&quot;http://madmeaning.com/wp-content/uploads/2017/10/Sleep-Icon-1.jpg&quot;
-
-Work_imag=&quot;http://www.justthoughtyoushouldknow.org/wp-content/uploads/2014/08/Work_life_balance_rat_race.png&quot;
-
-Home_imag=&quot;http://madmeaning.com/wp-content/uploads/2017/10/Sleep-Icon-1.jpg&quot;
-
-Work_icon&lt;-makeIcon(Work_imag,iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
-Home_icon&lt;-makeIcon(Home_imag,iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
-
-
-II=icons(iconUrl=c(Work_imag,Home_imag),iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
-
-Pop=c(&quot;Work address&quot;,&quot;Home address&quot;)
-
-#II=icons(iconUrl=c(Work_image,Home_image),iconWidth=31,iconHeight = 31,iconAnchorX = 16,iconAnchorY = 16)
-
-Location&lt;-data.frame(Lng=c(Work_adres[1],Home_adres[1]),Lat=c(Work_adres[2]),Home_adres[2])
-
-
-m&lt;-Location %&gt;% leaflet() %&gt;% addTiles() %&gt;% addMarkers(lng=~Lng,lat=~Lat,popup=Pop,icon=II) %&gt;% addPolylines( lng = ~Lng, lat = ~Lat)
-
-m</code></pre>
-<div id="htmlwidget-0d7ca4a10b198656e635" style="width:672px;height:480px;" class="leaflet html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0d7ca4a10b198656e635">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[50.876433,50.876433],[4.700745,4.309687],{"iconUrl":{"data":["http://www.justthoughtyoushouldknow.org/wp-content/uploads/2014/08/Work_life_balance_rat_race.png","http://madmeaning.com/wp-content/uploads/2017/10/Sleep-Icon-1.jpg"],"index":[0,1]},"iconWidth":31,"iconHeight":31,"iconAnchorX":16,"iconAnchorY":16},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Work address","Home address"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[4.700745,4.309687],"lat":[50.876433,50.876433]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":false,"fillColor":"#03F","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[50.876433,50.876433],"lng":[4.309687,4.700745]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-25db9cedaae55a4024df" style="width:672px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-25db9cedaae55a4024df">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addTiles","args":["//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",null,null,{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"attribution":"&copy; <a href=\"http://openstreetmap.org\">OpenStreetMap<\/a> contributors, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA<\/a>"}]},{"method":"addMarkers","args":[[50.876433,50.876433],[4.700745,4.309687],{"iconUrl":{"data":["http://www.justthoughtyoushouldknow.org/wp-content/uploads/2014/08/Work_life_balance_rat_race.png","http://madmeaning.com/wp-content/uploads/2017/10/Sleep-Icon-1.jpg"],"index":[0,1]},"iconWidth":31,"iconHeight":31,"iconAnchorX":16,"iconAnchorY":16},null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},["Work address","Home address"],null,null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addPolylines","args":[[[[{"lng":[4.700745,4.309687],"lat":[50.876433,50.876433]}]]],null,null,{"interactive":true,"className":"","stroke":true,"color":"#03F","weight":5,"opacity":0.5,"fill":false,"fillColor":"#03F","fillOpacity":0.2,"smoothFactor":1,"noClip":false},null,null,null,{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[50.876433,50.876433],"lng":[4.309687,4.700745]}},"evals":[],"jsHooks":[]}</script>
 </div>
 
 
